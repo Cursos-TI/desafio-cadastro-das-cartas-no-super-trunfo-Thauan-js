@@ -44,7 +44,7 @@ int main() {
     scanf("%s", &codigoa1);
 
     printf("Digite a população: ");
-    sscanf("%d", &populacao1);
+    scanf("%d", &populacao1);
 
     printf("Digite a área: ");
     scanf("%f", &areaa1);
@@ -55,10 +55,12 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistico1);
 
+
     printf("Digite as informações da Carta 02:\n");
 
+
     printf("Escolha um estado: ");
-    scanf("%c", &B2);
+    scanf(" %c", &B2);
 
     printf("Digite o código da cidade: ");
     scanf(" %s", &codb2);
@@ -67,7 +69,7 @@ int main() {
     scanf("%s", &codigob2);
 
     printf("Digite a população: ");
-    sscanf("%d", &populacao2);
+    scanf("%d", &populacao2);
 
     printf("Digite a área: ");
     scanf("%f", &areab2);
@@ -78,7 +80,7 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &turistico2);
 
-    print("Segue as informações:\n");
+    printf("Segue as informações:\n");
 
     printf("Carta 1:\n");
     printf("Estado: %c\n", A1);
