@@ -1,28 +1,37 @@
-//Código nível aventureiro com Densidade e PIB adicionados
-
 #include <stdio.h>
 
 int main() {
     char A1;
     char B2;
+
     char coda1[20];
     char codb2[20];
+
     char codigoa1[20];
     char codigob2[20];
-    int populacao1;
-    int populacao2;
+
+    unsigned long int populacao1;
+    unsigned long int populacao2;
+
     float areaa1;
     float areab2;
+
     float pib1;
     float pib2;
+
     int turistico1;
     int turistico2;
+
     float dens1;
     float dens2;
+
     float pibcapita1;
     float pibcapita2;
 
-    
+    float superpoder1;
+    float superpoder2;
+    float superpoder;
+
 
     printf("Digite As informações da Carta 01:\n");
     printf("Escolha um estado: ");
@@ -77,6 +86,8 @@ int main() {
     dens2 = populacao2 / areab2;
     pibcapita2 = pib2 / populacao2;
 
+    superpoder1 = (populacao1 + areaa1 + pib1 + turistico1 + pibcapita1);
+    superpoder2 = (populacao2 + areab2 + pib2 + turistico2 + pibcapita2);
 
     printf("Carta 1:\n");
     printf("Estádo: %c\n", A1);
@@ -103,7 +114,22 @@ int main() {
     printf("Densidade Populacional: %.2f", dens2);
     printf(" hab/km²\n");
     printf("PIB per capita: %.2f", pibcapita2);
-    printf(" Reais²");
+    printf(" Reais²\n\n");
 
-    return 0;
+
+    printf("População: Carta %d venceu (%d)\n", (populacao1 > populacao2) ? 1 : 2, populacao1 > populacao2);
+
+    printf("Área: Carta %d venceu (%d)\n", (areaa1 > areab2) ? 1 : 2, areaa1 > areab2);
+
+    printf("PIB: Carta %d venceu (%d)\n", (pib1 > pib2) ? 1 : 2, pib1 > pib2);
+
+    printf("Pontos Turísticos: Carta %d venceu (%d)\n", (turistico1 > turistico2) ? 1 : 2, turistico1 > turistico2);
+
+    printf("Densidade Populacional: Carta %d venceu (%d)\n", (dens1 < dens2) ? 1 : 2, dens1 < dens2);
+
+    printf("PIB per Capita: Carta %d venceu (%d)\n", (pibcapita1 > pibcapita2) ? 1 : 2, pibcapita1 > pibcapita2);
+
+    printf("Super Poder: Carta %d venceu (%d)\n", (superpoder1 > superpoder2) ? 1 : 2, superpoder1 > superpoder2);
+    
+
 }
